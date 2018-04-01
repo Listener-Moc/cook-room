@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+    .cube-container{
+      margin-top: 300px;
+      list-style: none;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateX(20deg) rotateY(20deg);
+      animation: spin 11s linear infinite alternate;
+    }
+    .cube-container :nth-child(1){
+      transform: translateX(0) translateY(-50%) rotateY(90deg);
+      background-color: red
+    }
+    .cube-container :nth-child(2){
+      transform: translateX(-50%) translateY(0) rotateX(90deg) rotateZ(90deg);
+      background-color: green
+    }
+    .cube-container :nth-child(3){
+      transform: translateX(-100%) translateY(-50%) rotateY(90deg);
+      background-color: yellow
+    }
+    .cube-container :nth-child(4){
+      transform: translateX(-50%) translateY(-100%) rotateX(90deg);
+      background-color: orange
+    }
+    .cube-container :nth-child(5){
+      transform: translateX(-50%) translateY(-50%) translateZ(50px);
+      background-color: purple
+    }
+    .cube-container :nth-child(6){
+      transform: translateX(-50%) translateY(-50%) translateZ(-50px);
+      background-color: blue
+    }
+    .cubeItem{
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+      position: absolute;
+      opacity: .5;
+      font-size: 2em;
+      text-align: center;
+      line-height: 100px;
+      transform: translate3d(50%, 50%, 50%)
+    }
+    /* @keyframes spin {
+      from { transform: rotateY(0); }
+      to { transform: rotateY(360deg); }
+    }
+    @keyframes spin {
+      from { transform: rotateX(0); }
+      to { transform: rotateX(360deg); }
+    } */
+    /* @keyframes spin {
+      from { transform: rotateZ(0); }
+      to { transform: rotateZ(360deg); }
+    } */
+    @keyframes spin {
+      from { transform: rotateX(0) rotateY(0) rotateZ(0); }
+      to { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="cube-container">
+    <div class="cubeItem">1</div>
+    <div class="cubeItem">2</div>
+    <div class="cubeItem">3</div>
+    <div class="cubeItem">4</div>
+    <div class="cubeItem">5</div>
+    <div class="cubeItem">6</div>
+  </div>
+</body>
+</html>
