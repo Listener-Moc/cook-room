@@ -1,0 +1,22 @@
+{
+  "name": "cook-room",
+  "version": "1.0.0",
+  "description": "cook code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Listener-Moc/cook-room.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Listener-Moc/cook-room/issues"
+  },
+  "homepage": "https://github.com/Listener-Moc/cook-room#readme",
+  "dependencies": {
+    "jslint": "^0.12.0"
+  }
+}

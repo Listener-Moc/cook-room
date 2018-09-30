@@ -11,7 +11,7 @@ let data = {
 	}
 }
 
-function defindReactive(obj, key, val) {
+function defineReactive(obj, key, val) {
 	Object.defineProperty(obj, key, {
     enumerable: true,
     configurable: true,
@@ -31,7 +31,7 @@ function defindReactive(obj, key, val) {
 
 function observer(value) {
 	Object.keys(value).forEach(key => {
-		defindReactive(data, key, data[key]);
+		defineReactive(data, key, data[key]);
 	})
 }
 
