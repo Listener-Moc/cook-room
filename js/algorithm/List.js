@@ -1,8 +1,8 @@
-function List () {
+function List() {
   this.pos = 0;
   this.listSize = 0;
   this.dataList = [];
-  //简单元素
+  // 简单元素
   this.append = append;
   this.remove = remove;
   this.clear = clear;
@@ -10,7 +10,7 @@ function List () {
   this.insert = insert;
   this.find = find;
   this.toString = toString;
-  //遍历器
+  // 遍历器
   this.start = start;
   this.end = end;
   this.pre = pre;
@@ -25,7 +25,7 @@ function List () {
   }
   // 删
   function remove(ele) {
-    let index = this.find(ele);
+    const index = this.find(ele);
     if (index > -1) {
       this.dataList.splice(index, 1);
       this.listSize--;
@@ -41,7 +41,7 @@ function List () {
   }
   // 改
   function update(ele) {
-    let index = this.find(ele);
+    const index = this.find(ele);
     if (index > -1) {
       this.change(index, ele);
     }
@@ -56,7 +56,7 @@ function List () {
   }
   // 插入
   function insert(ele, after) {
-    let index = this.find(after);
+    const index = this.find(after);
     if (index > -1) {
       this.dataList.splice(index, 0, ele);
       this.listSize++;
@@ -111,10 +111,10 @@ function List () {
   }
 }
 
-let nameList = new List();
+const nameList = new List();
 
-for (var i=0; i < 10; i++) {
-  nameList.append(`第${i}个我`)
+for (let i = 0; i < 10; i++) {
+  nameList.append(`第${i}个我`);
 }
 
-console.log(nameList.toString()) 
+console.log(nameList.toString());

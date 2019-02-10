@@ -1,15 +1,16 @@
-var readline = require('readline')
+const readline = require('readline');
+
 const rl = readline.createInterface({
   input: process.stdin,
-  output: process.stdout
-})
+  output: process.stdout,
+});
 
-let dataTotol = [];
-rl.on('line', function(line) {
-    dataTotol.push(line);
-})
+const dataTotol = [];
+rl.on('line', (line) => {
+  dataTotol.push(line);
+});
 
-let dataNum1 = dataTotol.shift();
-let sample1 = dataTotol.splice(0,dataNum1);
-let dataNum2 = dataTotol.shift();
-let sample2 = dataTotol.splice(0,dataNum2);
+const dataNum1 = dataTotol.shift();
+const sample1 = dataTotol.splice(0, dataNum1);
+const dataNum2 = dataTotol.shift();
+const sample2 = dataTotol.splice(0, dataNum2);
