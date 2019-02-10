@@ -5,10 +5,10 @@ const PEDDING = 'pedding',
 
 function MyPromise(fn) {
 	if (!(this instanceof MyPromise)) {
-		return throw new Error("MyPromise must be constructed via new!")
+		throw new Error("MyPromise must be constructed via new!")
 	}
 	if (typeof fn !== 'function') {
-		return throw new Error("MyPromise's argument must be function!")
+		throw new Error("MyPromise's argument must be function!")
 	}
 
 	let callbacks = [];
